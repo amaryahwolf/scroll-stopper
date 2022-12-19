@@ -1,10 +1,10 @@
 // Global variables
-var cityInput = $('.city-input');
-var weatherCard = $('.weather-card')
+const cityInput = $('.city-input');
+const weatherCard = $('.weather-card')
 
 // Function to populate current weather data
 function getWeather() {
-    var weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityInput + '&units=imperial&appid=9c63818d2a58372824ad020aa4224924'
+    const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityInput + '&units=imperial&appid=9c63818d2a58372824ad020aa4224924'
     fetch(weatherUrl)
         .then(function (response) {
             return response.json();
@@ -12,23 +12,23 @@ function getWeather() {
         .then(function (data) {
             console.log(data)
     weatherCard.innerHTML = '' 
-    var date = $('<p>');
-    var milliseconds = new Date(data.dt * 1000)
-    var convertedDate = milliseconds.toLocaleDateString()
+    const date = $('<p>');
+    const milliseconds = new Date(data.dt * 1000)
+    const convertedDate = milliseconds.toLocaleDateString()
     date.text(convertedDate);
     weatherCard.append(date);
-    var iconCode = data.weather[0].icon;
-    var iconUrl = 'https://openweathermap.org/img/wn/' + iconCode + '@2x.png';
-    var icon = $('<img>');
+    const iconCode = data.weather[0].icon;
+    const iconUrl = 'https://openweathermap.org/img/wn/' + iconCode + '@2x.png';
+    const icon = $('<img>');
     icon.src = iconUrl;
     weatherCard.append(icon);
-    var temp = $('<p');
+    const temp = $('<p');
     temp.text(data.main.temp + '°F');
     weatherCard.append(temp);
-    var wind = $('<p>');
+    const wind = $('<p>');
     wind.text(data.wind.speed + ' MPH Winds');
     weatherCard.append(wind);
-    var humidity = $('<p>');
+    const humidity = $('<p>');
     humidity.text(data.main.humidity + '% Humidity');
     weatherCard.append(humidity); 
 })
