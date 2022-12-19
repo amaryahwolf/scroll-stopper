@@ -5,8 +5,25 @@
     --blue: #00E5E8;
     --green: #007C77;
 }
-
 .weather-card {
     display: flex;
     gap: 30px; 
+}
+.container-fluid {
+    max-height: 100%;
+}
+.input-group {
+    margin-top: 500px;
+}
+.form-control {
+    border: 3px solid var(--blue);
+}
+button {
+    margin-left: 2rem;
+}
+.btn-custom {
+    background-color: var(--blue);
+}
+.hide {
+    display: none;
 }
