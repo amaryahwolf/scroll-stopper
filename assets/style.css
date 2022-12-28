@@ -5,6 +5,10 @@
     --blue: #00E5E8;
     --green: #007C77;
 }
+.weather-card {
+    display: flex;
+    gap: 30px; 
+}
 .container-fluid {
     max-height: 100%;
 }
