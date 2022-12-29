@@ -15,7 +15,7 @@
         <div id="name-form" class="row">
             <div class="col">
                 <div class="input-group mb-3 w-25 mx-auto">
-                    <input id="name-input" type="text" class="form-control" placeholder="Enter Your Name"/>
+                    <input id="name-input" type="text" class="form-control" placeholder="What's your name?"/>
                     <button type="button" class="btn btn-custom-pink" id="name-btn">-></button> <!--replace with icon-->
                 </div>
             </div>
@@ -24,17 +24,17 @@
         <div id="location-form" class="row hide">
             <div class="col">
                 <div class="input-group mb-3 w-25 mx-auto">
-                    <input type="text" class="form-control" placeholder="Enter Your Location" />
+                    <input id="location-input" type="text" class="form-control" placeholder="Enter Your Location" />
                     <button type="button" class="btn btn-custom-blue">-></button> <!--replace with icon-->
                 </div>
             </div>
         </div>
         <!-- Greeting View -->
-        <div class="row">
+        <div id="greeting-container" class="row hide">
             <div class="col">
                 <div class="greeting-group mb-3 w-25 mx-auto">
-                    <div class="greeting"> Hi <span id="userName">{{name}}</span> !
-                        <button type="button" class="btn btn-custom-yellow">-></button> <!--replace with icon-->
+                    <div class="greeting"> Hi <span id="user-name"></span> !
+                        <button type="button" class="btn btn-custom-green">-></button> <!--replace with icon-->
                     </div>
                 </div>
             </div>
