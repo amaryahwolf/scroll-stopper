@@ -1,6 +1,25 @@
+$(document).ready(function() {
+
 // Global variables
 const cityInput = $('.city-input');
 const weatherCard = $('.weather-card')
+
+// Function to save name in local storage
+$( "#name-input" )
+  .keyup(function() {
+    var value = $( this ).val();
+    $( "p" ).text( value );
+  })
+.keyup() 
+$('#name-btn').on('click', nameHandler())
+
+function nameHandler() { 
+    // event.preventDefault()
+    const nameInput = $('input');
+    const name = JSON.stringify(nameInput.val())
+    console.log('Hello World');
+    localStorage.setItem('username', name);
+}
 
 // Function to populate current weather data
 function getWeather() {
@@ -33,4 +52,5 @@ function getWeather() {
     weatherCard.append(humidity); 
 })
 }
-// getWeather();
+
+})
