@@ -12,7 +12,7 @@
 .container-fluid {
     max-height: 100%;
 }
-.input-group {
+.input-group, .greeting-group {
     margin-top: 500px;
 }
 .form-control {
@@ -21,8 +21,14 @@
 button {
     margin-left: 2rem;
 }
-.btn-custom {
+.btn-custom-blue {
     background-color: var(--blue);
+}
+.btn-custom-pink {
+    background-color: var(--pink);
+}
+.btn-custom-yellow {
+    background-color: var(--yellow);
 }
 .hide {
     display: none;
