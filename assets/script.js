@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
   // Global variables
-  const cityInput = $('.city-input');
-  const weatherCard = $('.weather-card');
-  const savedName = $('#user-name');
+    const weatherCard = $('.weather-card');
+    var savedName = $('#user-name');
+    var location;
 
   // Function to save name in local storage
   $('#name-btn').click(function () { 
@@ -13,12 +13,24 @@ $(document).ready(function() {
       $('#name-form').addClass('hide');
       $('#location-form').removeClass('hide');
   })
-  
+    // Function to save location in local storage
+    $('#location-btn').click(function () { 
+        const locationText = $('#location-input').val();
+        location = locationText;
+        console.log(location)
+        localStorage.setItem('location', locationText);
+        // Show Location Input
+        $('#location-form').addClass('hide');
+        $('#greeting-container').removeClass('hide');
   // Function to display the name 
+        var x = localStorage.getItem('username');
+        savedName.text(x)
+    })
+  
   
   // Function to populate current weather data
   function getWeather() {
-      const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityInput + '&units=imperial&appid=9c63818d2a58372824ad020aa4224924'
+      const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + location + '&units=imperial&appid=9c63818d2a58372824ad020aa4224924'
       fetch(weatherUrl)
           .then(function (response) {
               return response.json();
