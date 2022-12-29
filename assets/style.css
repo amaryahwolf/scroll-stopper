@@ -5,17 +5,26 @@
     --blue: #00E5E8;
     --green: #007C77;
 }
+.hide {
+    display: none;
+}
 .weather-card {
     display: flex;
     gap: 30px; 
 }
+/* FIRST PAGE */
 .container-fluid {
     max-height: 100%;
 }
 .input-group, .greeting-group {
     margin-top: 500px;
 }
-.form-control {
+#name-input {
+    border: 3px solid var(--pink);
+    color: var(--pink);
+}
+
+#location-input {
     border: 3px solid var(--blue);
 }
 button {
@@ -27,9 +36,12 @@ button {
 .btn-custom-pink {
     background-color: var(--pink);
 }
-.btn-custom-yellow {
-    background-color: var(--yellow);
+.btn-custom-green {
+    background-color: var(--green);
+    margin-left: 1rem !important;
 }
-.hide {
-    display: none;
+.greeting {
+    color: var(--green);
+    font-weight: 600;
+    font-size: x-large;
 }

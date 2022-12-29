@@ -3,6 +3,7 @@ $(document).ready(function() {
   // Global variables
   const cityInput = $('.city-input');
   const weatherCard = $('.weather-card');
+  const savedName = $('#user-name');
 
   // Function to save name in local storage
   $('#name-btn').click(function () { 
@@ -12,7 +13,9 @@ $(document).ready(function() {
       $('#name-form').addClass('hide');
       $('#location-form').removeClass('hide');
   })
-
+  
+  // Function to display the name 
+  
   // Function to populate current weather data
   function getWeather() {
       const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityInput + '&units=imperial&appid=9c63818d2a58372824ad020aa4224924'
