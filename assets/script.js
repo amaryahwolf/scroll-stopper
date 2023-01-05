@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   // Global variables
-    const weatherCard = $('.weather-card');
+    const weatherCard = $('#weather-card');
     var savedName = $('#user-name');
     var location;
 
@@ -45,10 +45,11 @@ $(document).ready(function() {
       weatherCard.append(date);
       const iconCode = data.weather[0].icon;
       const iconUrl = 'https://openweathermap.org/img/wn/' + iconCode + '@2x.png';
-      const icon = $('<img>');
+      var icon = new Image();
       icon.src = iconUrl;
-      weatherCard.append(icon);
-      const temp = $('<p');
+      weatherCard.append(icon)
+      console.log(icon)
+      const temp = $('<p>');
       temp.text(data.main.temp + '°F');
       weatherCard.append(temp);
       const wind = $('<p>');
