@@ -82,5 +82,6 @@ $(document).ready(function() {
   function showMainPage(mood) {
     $('#mood-container').addClass('hide');
     $('#main-application').removeClass('hide');
+    getWeather();
   }
 })
