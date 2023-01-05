@@ -60,4 +60,27 @@ $(document).ready(function() {
       weatherCard.append(humidity); 
   })
   }
+
+  // Functions to store the user's mood
+  $('#happy-btn').click(function () {
+      const mood = 'happy';
+      localStorage.setItem('usermood', mood);
+      showMainPage(mood);
+  })
+  $('#neutral-btn').click(function () {
+    const mood = 'neutral';
+    localStorage.setItem('usermood', mood);
+    showMainPage();
+})
+  $('#sad-btn').click(function () {
+    const mood = 'sad';
+    localStorage.setItem('usermood', mood);
+    showMainPage();
+  })
+
+  // Function to show the main page of the application
+  function showMainPage(mood) {
+    $('#mood-container').addClass('hide');
+    $('#main-application').removeClass('hide');
+  }
 })

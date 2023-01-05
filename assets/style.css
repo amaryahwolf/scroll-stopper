@@ -14,6 +14,11 @@
     max-height: 100%;
 }
 .input-group, .greeting-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 500px;
+}
+.mood-group {
     margin-top: 500px;
 }
 #name-input {
@@ -37,11 +42,15 @@ button {
     background-color: var(--green);
     margin-left: 1rem !important;
 }
+.fa-arrow-right {
+    color: white;
+}
 .greeting {
     color: var(--green);
     font-weight: 600;
     font-size: x-large;
 }
+
 
 /* MAIN PAGE */
 
@@ -51,4 +60,23 @@ button {
     align-items: start;
     gap: 30px;
     margin-right: 30px;
+ }
+
+.mood-question {
+    color: var(--green);
+    font-weight: 600;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+}
+.smiley-group {
+    display: flex;
+    justify-content: center;
+}
+.smiley-group .btn {
+    margin-left: 0;
+}
+.fa-regular {
+    font-size: 32px;
+    color: var(--green);
 }
