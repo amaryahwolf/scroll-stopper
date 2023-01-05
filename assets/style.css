@@ -8,10 +8,7 @@
 .hide {
     display: none;
 }
-.weather-card {
-    display: flex;
-    gap: 30px; 
-}
+
 /* FIRST PAGE */
 .container-fluid {
     max-height: 100%;
@@ -44,4 +41,14 @@ button {
     color: var(--green);
     font-weight: 600;
     font-size: x-large;
+}
+
+/* MAIN PAGE */
+
+#weather-card {
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    gap: 30px;
+    margin-right: 30px;
 }
