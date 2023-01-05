@@ -4,7 +4,6 @@ $(document).ready(function() {
     const weatherCard = $('.weather-card');
     var savedName = $('#user-name');
     var location;
-    var savedMood; //if we want to display the mood anywhere ?
 
   // Function to save name in local storage
   $('#name-btn').click(function () { 
@@ -64,25 +63,22 @@ $(document).ready(function() {
   // Functions to store the user's mood
   $('#happy-btn').click(function () {
       const mood = 'happy';
-      savedMood = mood;
       localStorage.setItem('usermood', mood);
-      showMainPage();
+      showMainPage(mood);
   })
   $('#neutral-btn').click(function () {
     const mood = 'neutral';
-    savedMood = mood;
     localStorage.setItem('usermood', mood);
     showMainPage();
 })
   $('#sad-btn').click(function () {
     const mood = 'sad';
-    savedMood = mood;
     localStorage.setItem('usermood', mood);
     showMainPage();
   })
 
   // Function to show the main page of the application
-  function showMainPage() {
+  function showMainPage(mood) {
     $('#mood-container').addClass('hide');
     $('#main-application').removeClass('hide');
   }
