@@ -10,13 +10,13 @@
 </head>
 <body>
     <!-- Page 1 -->
-    <div class="container-fluid">
+    <div id="1" class="container-fluid">
         <!-- Name Input -->
         <div id="name-form" class="row">
             <div class="col">
                 <div class="input-group mb-3 w-25 mx-auto">
                     <input id="name-input" type="text" class="form-control" placeholder="What's your name?"/>
-                    <button type="button" class="btn btn-custom-pink" id="name-btn">-></button> <!--replace with icon-->
+                    <button type="button" class="btn btn-custom-pink" id="name-btn"><i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
             <div class="col">
                 <div class="input-group mb-3 w-25 mx-auto">
                     <input id="location-input" type="text" class="form-control" placeholder="Enter Your Location" />
-                    <button type="button" class="btn btn-custom-blue" id="location-btn">-></button> <!--replace with icon-->
+                    <button type="button" class="btn btn-custom-blue" id="location-btn"><i class="fa-solid fa-arrow-right"></i></button> 
                 </div>
             </div>
         </div>
@@ -34,10 +34,28 @@
             <div class="col">
                 <div class="greeting-group mb-3 w-25 mx-auto">
                     <div class="greeting"> Hi <span id="user-name"></span> !
-                        <button type="button" class="btn btn-custom-green">-></button> <!--replace with icon-->
+                        <button type="button" class="btn btn-custom-green"><i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- Feeling View -->
+        <div id="mood-container" class="row hide">
+            <div class="col">
+                <div class="mood-group mb-3 w-25 mx-auto">
+                    <div class="mood-question"> How are you feeling ? </div>
+                    <div class="smiley-group">
+                        <button id="happy-btn" class="btn"><i class="fa-regular fa-face-smile"></i></button>
+                        <button id="neutral-btn" class="btn"><i class="fa-regular fa-face-meh"></i></button>
+                        <button id="sad-btn" class="btn"><i class="fa-regular fa-face-frown"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page 2 -->
+    <div id="2" class="container-fluid">
+        <div id="main-application" class="row hide">
+            <p> YOU MADE IT! </p> <!-- TEMP -->
         </div>
     </div>
 <!-- Font Awesome link -->
